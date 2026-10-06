@@ -163,6 +163,37 @@ footer p{color:#546a88;font-size:.85rem;margin-top:8px;letter-spacing:1px}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--cyan)}
 
+
+/* arsenal tabs */
+.arsenal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 22px}
+.atab{font-family:'Orbitron';font-weight:700;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;
+  padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(10,16,28,.85);
+  color:var(--muted);cursor:pointer;transition:.25s}
+.atab:hover{color:var(--cyan);border-color:rgba(34,211,238,.4)}
+.atab.on{color:#02131a;background:linear-gradient(100deg,var(--cyan),var(--blue-2));border-color:transparent;box-shadow:0 6px 22px rgba(34,211,238,.3)}
+.apane{display:none;animation:fadeUp .4s}
+.apane.on{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+.stat-box{border:1px solid var(--line);border-radius:12px;padding:16px;background:rgba(3,5,7,.6);text-align:center}
+.stat-box b{display:block;font-family:'Orbitron';font-size:1.35rem;color:var(--cyan)}
+.stat-box.red b{color:#e0526b}
+.stat-box span{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.warn{border:1px dashed rgba(224,82,107,.55);background:rgba(224,82,107,.08);border-radius:12px;padding:16px 18px;margin:16px 0;color:#f0a3b2;font-size:.94rem;line-height:1.6}
+.warn b{color:#ff6b85}
+.gold-note{border:1px solid rgba(245,197,66,.4);background:rgba(245,197,66,.07);border-radius:12px;padding:16px 18px;margin:16px 0;color:#f2d488;font-size:.94rem;line-height:1.6}
+.gold-note b{color:var(--gold)}
+.waver-hero{border:1px solid rgba(224,82,107,.5);border-radius:20px;padding:36px 30px;text-align:center;margin-bottom:20px;
+  background:linear-gradient(165deg,rgba(224,82,107,.12),transparent 60%),rgba(10,16,28,.9)}
+.waver-hero h3{font-family:'Orbitron';font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:4px;
+  background:linear-gradient(90deg,#ff8fa3,#e0526b,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.waver-hero .sub{font-family:'Orbitron';font-size:.72rem;letter-spacing:4px;color:#f0a3b2;text-transform:uppercase;margin-top:8px}
+.god-list{list-style:none;margin-top:6px}
+.god-list li{color:#93a9c6;font-size:.94rem;line-height:1.7;padding-left:22px;position:relative;margin-bottom:6px}
+.god-list li::before{content:"\26A1";position:absolute;left:0;top:0}
+.secret{border:1px solid rgba(139,92,246,.45);border-radius:16px;padding:24px;background:linear-gradient(165deg,rgba(139,92,246,.12),transparent 60%),rgba(10,16,28,.9)}
+.secret h3{font-family:'Orbitron';color:#c4b5fd;font-size:1.05rem;margin-bottom:10px;letter-spacing:1px}
+
 @media(max-width:900px){
   .facts{grid-template-columns:repeat(2,1fr)}
   .beats,.chars{grid-template-columns:1fr}
@@ -188,6 +219,7 @@ footer a:hover{color:var(--cyan)}
       <a href="#story">Story</a>
       <a href="#family">Family</a>
       <a href="#clan">Wave Style</a>
+      <a href="#arsenal">Arsenal</a>
       <a href="#volumes">Chapters</a>
     </div>
   </nav>
@@ -379,6 +411,176 @@ footer a:hover{color:var(--cyan)}
     </div>
   </div>
 </section>
+
+
+<!-- ===================== FULL ARSENAL ===================== -->
+<section id="arsenal">
+  <div class="wrap">
+    <div class="sec-tag">Complete Arsenal</div>
+    <h2>Nanzo's Full Power Arsenal</h2>
+    <p class="lead">
+      Every technique in the Prince's arsenal — the restored chronicles from the old records. Beyond Kage Level.
+      Beyond World Level. Some of it, <b>he has never once used</b>.
+    </p>
+
+    <div class="arsenal-tabs">
+      <button class="atab on" onclick="showPane('a-wave',this)">Wave Style</button>
+      <button class="atab" onclick="showPane('a-wind',this)">Wind Style</button>
+      <button class="atab" onclick="showPane('a-grav',this)">Gravity</button>
+      <button class="atab" onclick="showPane('a-seal',this)">Sealing &amp; Clones</button>
+      <button class="atab" onclick="showPane('a-waver',this)" style="border-color:rgba(224,82,107,.5);color:#f0a3b2">Waver Mode</button>
+      <button class="atab" onclick="showPane('a-shibai',this)">Shibai Secret</button>
+    </div>
+
+    <!-- WAVE STYLE -->
+    <div id="a-wave" class="apane on">
+      <p class="lead" style="margin-bottom:20px"><b>Blood Exclusive Kekkei Genkai</b> — only Anitsu Clan blood descendants possess it. Karui does <b>not</b> have it, despite marriage. Vibrational pulses bypass skin and strike the inside of a body directly.</p>
+      <div class="powers">
+        <div class="power">
+          <h3>Internal Organ Destruction</h3>
+          <p>Wave pulses liquefy lungs, rupture hearts without an external wound, shatter spinal columns. Perfect assassination — death with no visible cause.</p>
+          <div class="stat-row">
+            <div class="stat-box"><b>15m</b><span>Cooldown</span></div>
+            <div class="stat-box red"><b>&infin;</b><span>Lethality</span></div>
+          </div>
+        </div>
+        <div class="power">
+          <h3>Brain Wave Disruption</h3>
+          <p>Precise strikes destroy neural pathways, cause cerebral hemorrhage through vibration, and shut down all brain function instantly. No external injury.</p>
+        </div>
+        <div class="power">
+          <h3>Chakra Network Collapse</h3>
+          <p>Destructive waves through the tenketsu cause permanent chakra pathway destruction. Victims die from internal system failure. Medical ninjutsu cannot restore shattered nodes.</p>
+        </div>
+        <div class="power weak">
+          <h3>The Weakness</h3>
+          <p>Wave pulses cannot be emitted within five meters of the user without harming the user. Inside that circle there is no jutsu, no taijutsu, no kenjutsu — only the body. And fifteen long minutes between major techniques.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIND STYLE -->
+    <div id="a-wind" class="apane">
+      <p class="lead" style="margin-bottom:20px">No one else has acquired these jutsu. Nanzo developed them using his academy physics expertise — devastating at range, suicidal up close. <b>Until she taught him otherwise.</b></p>
+      <div class="powers">
+        <div class="power weak">
+          <h3>Vortex</h3>
+          <p>Mid range — destroys everything near it by absorption. <b>At short range, the user dies by absorption himself.</b></p>
+        </div>
+        <div class="power weak">
+          <h3>Massive Destroyer</h3>
+          <p>Long range — wind performs destruction on impact. <b>At short range, the user dies from the massive destroyer.</b></p>
+        </div>
+        <div class="power">
+          <h3>Air Absorption</h3>
+          <p>Absorbs oxygen within range (~1km), killing targets. <b>Five-meter rule:</b> no effect within five meters of Nanzo himself.</p>
+        </div>
+        <div class="power" style="border-left-color:var(--gold)">
+          <h3 style="color:var(--gold)">Paralyze Sword</h3>
+          <p><b>Discovered after marriage, with Karui's help.</b> When the sword hits an opponent, wind pressure destroys cells at the contact point — causing permanent paralysis of the struck body part. Destroyed cells cannot be healed by conventional medical ninjutsu.</p>
+          <div class="gold-note"><b>Karui's Gift:</b> she taught him to channel wind chakra through the sword safely at close range — turning his greatest weakness into a weapon.</div>
+        </div>
+        <div class="power">
+          <h3>Wavering Wind</h3>
+          <p><b>World Exclusive:</b> winds form in waves. Opponents hit have their chakra stopped plus wind destruction inside the body — causing them to fly or die. Only Nanzo can perform this Wave + Wind combo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAVITY -->
+    <div id="a-grav" class="apane">
+      <p class="lead" style="margin-bottom:20px"><b>Founded and created by Nanzo alone</b> — not an Anitsu Clan art. Built on his academic expertise in physics, manipulating gravitational fields through chakra application.</p>
+      <div class="powers">
+        <div class="power" style="grid-column:1/-1">
+          <h3>Absolute Gravity Lock</h3>
+          <p>Can lock even gods in place — they cannot move, eye genjutsu cannot move, not a single grain of sand can shift. Can stop millions of armies, monsters, Susanoo, even gods — all helpless for one full minute.</p>
+          <div class="stat-row">
+            <div class="stat-box"><b>1 min</b><span>Duration</span></div>
+            <div class="stat-box red"><b>30 min</b><span>Cooldown</span></div>
+            <div class="stat-box red"><b>5 m</b><span>Dead Zone</span></div>
+          </div>
+          <div class="warn"><b>Indiscriminate Effect:</b> affects EVERYONE within range — friends, allies, enemies, all stuck equally. No magnitude or direction control. Once used, ALL are stuck.</div>
+        </div>
+        <div class="power weak" style="grid-column:1/-1">
+          <h3>Absolute Lock Effects</h3>
+          <p>When gravity is activated, <b>NO NINJUTSU, NO GENJUTSU, NO TAIJUTSU</b> can be performed — not a single hair can move, safe-mode orbs won't move. Complete paralysis of all physical and chakra-based action.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEALING & CLONES -->
+    <div id="a-seal" class="apane">
+      <p class="lead" style="margin-bottom:20px"><b>Invented by Nanzo</b> — his original sealing technique and clone art, using Wave Style principles.</p>
+      <div class="powers">
+        <div class="power" style="grid-column:1/-1">
+          <h3>Sealing Jutsu: Waves Destroyer</h3>
+          <p>Uses waves to <b>destroy/seal full chakra</b> — the target cannot use any chakra until unsealed. No jutsu, no chakra access. Effectively powerless.</p>
+          <div class="stat-row">
+            <div class="stat-box red"><b>30 s</b><span>Time Limit</span></div>
+            <div class="stat-box"><b>100%</b><span>Success if Stuck</span></div>
+          </div>
+          <p style="font-size:.92rem;color:#93a9c6"><b style="color:#eaf4ff">Usage:</b> typically combined with Gravity Manipulation — lock them with gravity, then seal their chakra. If the target escapes within 30 seconds, the seal fails. If they are beaten or stuck in gravity, the seal is guaranteed.</p>
+        </div>
+        <div class="power" style="grid-column:1/-1">
+          <h3>Wind Style Clones</h3>
+          <p>Creates <b>actual chakra clones</b> — real extensions of Nanzo, not illusions. Each clone can use ALL jutsu: Wave Style, Wind Style, Gravity Manipulation, Sealing.</p>
+          <div class="stat-row">
+            <div class="stat-box"><b>3 max</b><span>Normal Mode (4 total)</span></div>
+            <div class="stat-box red"><b>10 max</b><span>Waver Mode (11 total)</span></div>
+          </div>
+          <div class="warn"><b>Weakness:</b> if a clone is cut or destroyed, it dissipates immediately. Clones CANNOT use Waver Mode itself — only the original can access the suicide technique.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAVER MODE -->
+    <div id="a-waver" class="apane">
+      <div class="waver-hero">
+        <h3>WAVER MODE</h3>
+        <div class="sub">The Wavy Form &mdash; Ultimate Sacrifice Mode</div>
+        <div class="warn" style="text-align:left;margin-top:18px"><b>STATUS:</b> Nanzo has NEVER used it. Only two people in history can use this — Nanzo and the Clan Founder. Thirty minutes of godhood — then automatic death.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-box red"><b>200 km</b><span>Control Radius</span></div>
+        <div class="stat-box red"><b>30 min</b><span>Duration &rarr; Death</span></div>
+        <div class="stat-box"><b>10</b><span>Clones (11 total)</span></div>
+        <div class="stat-box"><b>10 min</b><span>Extended Gravity Lock</span></div>
+      </div>
+      <div class="card" style="margin-bottom:18px">
+        <h3 style="font-family:'Orbitron';font-size:1rem;color:#eaf4ff;margin-bottom:12px">God-Level Abilities</h3>
+        <ul class="god-list">
+          <li><b style="color:#eaf4ff">Wave Control:</b> all waves within 200km are his to command — sound, electromagnetic, chakra, seismic.</li>
+          <li><b style="color:#eaf4ff">Chakra Domination:</b> can control ALL chakra flow within 200km — even gods' chakra.</li>
+          <li><b style="color:#eaf4ff">Internal Destruction at Scale:</b> can kill anyone within 200km in seconds using Wave Style internal destruction.</li>
+          <li><b style="color:#eaf4ff">Sensory Overload:</b> waves destroy ear balance — victims cannot stand or walk normally.</li>
+          <li><b style="color:#eaf4ff">Destroyer Winds:</b> Wind Style becomes apocalyptic "Destroyer Powers."</li>
+          <li><b style="color:#eaf4ff">Wave Speed:</b> movement at the speed of wave propagation — god-level velocity.</li>
+          <li><b style="color:#eaf4ff">Flight:</b> can move and fly at wave speed — he is NOT immobilized.</li>
+        </ul>
+      </div>
+      <div class="warn"><b>Indiscriminate Apocalypse:</b> within 200km, ALL MILLIONS OF PERSONS are stuck — allies, friends, everyone. The gravity/wave control has no ally-exclusion. Once activated, no one performs ninjutsu, genjutsu, or taijutsu.</div>
+      <div class="gold-note"><b>The Vulnerability Paradox:</b> theoretically, if someone could stab his heart in Waver Mode, he would die — he is not truly immortal. <b>Practically impossible:</b> his god powers make him untouchable — he controls all waves, all chakra, all movement within 200km. No one can approach, no attack can reach him. Effectively invincible for the full duration. <b>The only death is the 30-minute limit itself.</b></div>
+    </div>
+
+    <!-- SHIBAI -->
+    <div id="a-shibai" class="apane">
+      <div class="secret">
+        <h3>&#128737;&#65039; TOP SECRET &mdash; Shibai &#332;tsutsuki Descent</h3>
+        <p style="color:#93a9c6;line-height:1.7">The Anitsu Clan descends directly from <b style="color:#c4b5fd">Shibai &#332;tsutsuki</b>. This is a closely guarded secret — NO ONE knows it outside the clan head. Their Wave Style Kekkei Genkai is derived from Shibai's divine abilities, explaining its god-like potential. Karui, as Nanzo's wife, may be one of the few trusted with this truth.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function showPane(id,btn){
+  document.querySelectorAll('.apane').forEach(function(p){p.classList.remove('on')});
+  document.querySelectorAll('.atab').forEach(function(b){b.classList.remove('on')});
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+</script>
 
 <!-- ===================== VOLUMES ===================== -->
 <section id="volumes">
