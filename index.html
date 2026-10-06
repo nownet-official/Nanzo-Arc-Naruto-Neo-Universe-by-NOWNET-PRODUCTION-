@@ -408,7 +408,7 @@ document.querySelectorAll('#dlBtn, .dl-btn, .modal-dl').forEach(function(a){
 /* ---- Read Online (works for hero button AND card buttons) ---- */
 function openReader(){
   var frame = document.getElementById('pdfFrame');
-  frame.src = PDF_URL;                       /* relative path = same folder on GitHub Pages */
+  frame.src = encodeURI("Nanzo_Arc--Naruto Neo universe (NOWNET PRODUCTION)_EBOOK.html"); /* same folder on GitHub Pages */
   document.getElementById('pdfModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
