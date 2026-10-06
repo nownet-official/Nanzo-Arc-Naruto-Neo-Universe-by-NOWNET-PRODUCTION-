@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story Details | Nanzo Arc — NOWNET Production</title>
+<meta name="description" content="Full story details of the Nanzo Arc — Naruto Neo Universe (Novel Edition): the Anitsu Clan massacre, the Anitsu family, Wave Style lore, and the complete chapter guide.">
+<link rel="icon" type="image/jpeg" href="Logo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#030507;
+  --bg-2:#070b12;
+  --panel:#0a101c;
+  --line:#14243d;
+  --cyan:#22d3ee;
+  --blue:#2563eb;
+  --blue-2:#3b82f6;
+  --purple:#8b5cf6;
+  --gold:#f5c542;
+  --text:#dbe7f5;
+  --muted:#7d93b2;
+  --glow:0 0 22px rgba(34,211,238,.45), 0 0 60px rgba(37,99,235,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;overflow-x:hidden}
+::selection{background:var(--cyan);color:#02131a}
+
+/* background layers — same as index */
+.bg-poster{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:url('nanzo-arc-poster.png') center/cover no-repeat fixed;opacity:.13;filter:saturate(1.15)}
+.bg-tint{position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 20% 8%, rgba(139,92,246,.14), transparent 60%),
+    radial-gradient(800px 600px at 85% 90%, rgba(37,99,235,.16), transparent 60%),
+    linear-gradient(180deg, rgba(3,5,7,.9) 0%, rgba(3,5,7,.75) 45%, rgba(3,5,7,.95) 100%)}
+.bg-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(37,99,235,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,.06) 1px, transparent 1px);
+  background-size:46px 46px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 20%, #000 30%, transparent 100%)}
+
+/* navbar */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(3,5,7,.78);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:14px}
+.nav img{height:42px;width:42px;border-radius:10px;box-shadow:var(--glow)}
+.brand{font-family:'Orbitron',sans-serif;font-weight:900;letter-spacing:3px;font-size:1.05rem;
+  background:linear-gradient(90deg,var(--cyan),var(--blue-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{display:block;font-family:'Rajdhani';font-weight:600;letter-spacing:5px;font-size:.62rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+.nav-links{margin-left:auto;display:flex;gap:6px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem;padding:8px 14px;border-radius:8px;transition:.25s}
+.nav-links a:hover{color:var(--cyan);background:rgba(34,211,238,.07)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* page hero */
+.page-hero{padding:80px 22px 30px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:6px 16px;
+  font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);background:rgba(34,211,238,.05)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.06;margin:22px 0 10px;
+  background:linear-gradient(100deg,#e8f6ff 10%,var(--cyan) 45%,var(--purple) 85%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(139,92,246,.35))}
+.page-sub{font-family:'Orbitron';font-weight:700;letter-spacing:5px;font-size:clamp(.8rem,1.8vw,1rem);color:var(--muted);text-transform:uppercase}
+.page-desc{max-width:720px;margin:22px auto 0;color:#a9bdd6;font-size:1.05rem;line-height:1.75}
+.page-desc b{color:#eaf4ff}
+
+/* quick facts strip */
+.facts{max-width:1180px;margin:40px auto 0;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fact{border:1px solid var(--line);border-radius:14px;padding:18px 14px;text-align:center;background:rgba(10,16,28,.8);backdrop-filter:blur(6px)}
+.fact b{display:block;font-family:'Orbitron';font-size:1.1rem;color:var(--cyan)}
+.fact span{font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+
+/* sections */
+section{padding:80px 0 10px}
+.sec-tag{font-size:.72rem;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
+h2{font-family:'Orbitron';font-weight:900;font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:14px;
+  background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#93a9c6;line-height:1.7;max-width:820px;margin-bottom:34px}
+.lead b{color:#eaf4ff}
+
+.card{border:1px solid var(--line);border-radius:18px;padding:30px 26px;
+  background:linear-gradient(165deg,rgba(139,92,246,.07),transparent 55%),rgba(10,16,28,.85);
+  backdrop-filter:blur(6px)}
+.card p{color:#93a9c6;line-height:1.7;font-size:.98rem}
+.card p b{color:#eaf4ff}
+
+/* story beats */
+.beats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.beat{border:1px solid var(--line);border-radius:16px;padding:24px 22px;
+  background:linear-gradient(165deg,rgba(139,92,246,.07),transparent 55%),rgba(10,16,28,.85);transition:.3s}
+.beat:hover{transform:translateY(-5px);border-color:rgba(139,92,246,.45)}
+.beat .k{font-family:'Orbitron';font-size:.7rem;letter-spacing:3px;color:var(--purple)}
+.beat h3{font-family:'Orbitron';font-size:1rem;margin:10px 0 8px;color:#eaf4ff}
+.beat p{color:#93a9c6;font-size:.94rem;line-height:1.65}
+
+/* character grid */
+.chars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.char{border:1px solid var(--line);border-radius:18px;padding:26px 24px;position:relative;overflow:hidden;
+  background:linear-gradient(165deg,rgba(139,92,246,.07),transparent 55%),rgba(10,16,28,.85);
+  transition:.3s}
+.char:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.4);box-shadow:0 18px 50px rgba(2,10,25,.7)}
+.char .tag{display:inline-block;font-family:'Orbitron';font-size:.62rem;letter-spacing:2.5px;padding:5px 12px;border-radius:999px;
+  border:1px solid rgba(139,92,246,.4);color:var(--purple);text-transform:uppercase;margin-bottom:14px}
+.char.hero-tag .tag{border-color:rgba(245,197,66,.5);color:var(--gold)}
+.char h3{font-family:'Orbitron';font-size:1.12rem;color:#eaf4ff;margin-bottom:4px}
+.char .aka{font-size:.78rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+.char ul{list-style:none;margin-top:6px}
+.char li{color:#93a9c6;font-size:.92rem;line-height:1.6;padding-left:16px;position:relative;margin-bottom:4px}
+.char li::before{content:"▸";position:absolute;left:0;color:var(--cyan)}
+
+/* volumes */
+.vol{margin-bottom:26px}
+.vol-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.vol-num{font-family:'Orbitron';font-weight:900;font-size:.85rem;letter-spacing:3px;color:var(--purple)}
+.vol-title{font-family:'Orbitron';font-weight:700;font-size:1.25rem;color:#eaf4ff}
+.chapter-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.ch{display:flex;gap:12px;align-items:baseline;border-bottom:1px dashed rgba(125,147,178,.18);padding:9px 4px}
+.ch .n{font-family:'Orbitron';font-size:.7rem;color:var(--cyan);flex:none;min-width:52px}
+.ch .t{color:#a9bdd6;font-size:.96rem}
+.ch .t small{color:#546a88}
+
+/* wave style powers */
+.powers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.power{border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:12px;padding:20px 22px;background:rgba(10,16,28,.85)}
+.power h3{font-family:'Orbitron';font-size:.98rem;color:#eaf4ff;margin-bottom:6px}
+.power p{color:#93a9c6;font-size:.92rem;line-height:1.6}
+.weak{border-left-color:#e0526b}
+.weak h3{color:#f0a3b2}
+
+/* buttons */
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Orbitron';font-weight:700;font-size:.82rem;letter-spacing:2px;
+  text-transform:uppercase;text-decoration:none;cursor:pointer;padding:15px 26px;border-radius:12px;border:1px solid transparent;transition:.28s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{color:#02131a;background:linear-gradient(100deg,var(--cyan),var(--purple));box-shadow:0 8px 30px rgba(139,92,246,.32)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 42px rgba(139,92,246,.45)}
+.btn-ghost{color:var(--cyan);border-color:var(--line);background:rgba(34,211,238,.05)}
+.btn-ghost:hover{border-color:var(--cyan);background:rgba(34,211,238,.12);transform:translateY(-3px)}
+.btn-outline{color:var(--text);border-color:var(--line);background:transparent}
+.btn-outline:hover{border-color:var(--blue-2);color:var(--cyan);transform:translateY(-3px)}
+
+/* quote */
+.quote{max-width:860px;margin:0 auto;text-align:center;border:1px solid var(--line);border-radius:22px;padding:44px 38px;
+  background:linear-gradient(165deg,rgba(139,92,246,.09),transparent 60%),rgba(10,16,28,.85)}
+.quote p{font-family:'Rajdhani';font-size:1.25rem;line-height:1.8;color:#c6d8ee;font-style:italic}
+.quote p b{color:var(--gold);font-style:normal}
+.quote .who{margin-top:16px;font-family:'Orbitron';font-size:.72rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+
+/* footer */
+footer{margin-top:100px;border-top:1px solid var(--line);padding:44px 22px;text-align:center;background:rgba(7,11,18,.92)}
+footer img{height:56px;border-radius:12px;margin-bottom:14px;box-shadow:var(--glow)}
+footer .f-brand{font-family:'Orbitron';letter-spacing:4px;font-weight:900;font-size:1rem;
+  background:linear-gradient(90deg,var(--cyan),var(--blue-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+footer p{color:#546a88;font-size:.85rem;margin-top:8px;letter-spacing:1px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--cyan)}
+
+@media(max-width:900px){
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .beats,.chars{grid-template-columns:1fr}
+  .chapter-list{grid-template-columns:1fr}
+  .powers{grid-template-columns:1fr}
+  .nav-links a:not(.keep){display:none}
+  .bg-poster{background-attachment:scroll}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-poster"></div>
+<div class="bg-tint"></div>
+<div class="bg-grid"></div>
+
+<header>
+  <nav class="nav">
+    <img src="Logo.jpg" alt="NOWNET Logo">
+    <div class="brand">NOWNET<small>PRODUCTION</small></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#story">Story</a>
+      <a href="#family">Family</a>
+      <a href="#clan">Wave Style</a>
+      <a href="#volumes">Chapters</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===================== PAGE HERO ===================== -->
+<div class="page-hero">
+  <span class="eyebrow">Official Story Dossier</span>
+  <h1>NANZO ARC — THE DETAILS</h1>
+  <div class="page-sub">Story of the Anitsu Clan · The Silence of Waves</div>
+  <p class="page-desc">
+    Everything you need to know about the first arc of <b>Naruto Neo Universe</b> — the fall of the
+    Anitsu Clan, the boy who survived it, the family that was lost and the family that remained, and the
+    complete chapter guide. Written by <b>Navaneeth Krishna</b> · Published by NOWNET Production.
+  </p>
+</div>
+
+<div class="facts">
+  <div class="fact"><b>4 YEARS</b><span>After the Third Ninja War</span></div>
+  <div class="fact"><b>97%</b><span>Of the Clan Lost</span></div>
+  <div class="fact"><b>4</b><span>Survivors</span></div>
+  <div class="fact"><b>3</b><span>Volumes · 16 Chapters</span></div>
+</div>
+
+<!-- ===================== STORY ===================== -->
+<section id="story">
+  <div class="wrap">
+    <div class="sec-tag">The Past Arc</div>
+    <h2>The Silence of Waves</h2>
+    <p class="lead">
+      Hidden deep in the cliffs of the Hidden Cloud Village, the <b>Anitsu Clan</b> guarded a secret older
+      than the village itself: the <b>Wave Style</b>, a Kekkei Genkai that manipulates vibration itself —
+      and the perfect counter to the Uchiha's visual jutsu. When the Uchiha leadership judged that secret
+      an existential threat, they struck one new-moon night in a covert operation disguised as a rogue
+      attack. In a single night, over two hundred Anitsu were silenced. Only four survived — and one of
+      them was a boy just one year old.
+    </p>
+    <div class="beats">
+      <div class="beat">
+        <div class="k">ACT I</div>
+        <h3>The Secret War</h3>
+        <p>The Uchiha had long studied the Anitsu. They knew the cooldowns, the blind spots, the weaknesses. When the Third War ended, the order was given — and a twelve-man strike team moved under diplomatic cover.</p>
+      </div>
+      <div class="beat">
+        <div class="k">ACT II</div>
+        <h3>The Night of Broken Waves</h3>
+        <p>The attack came at 3:00 AM, when Anitsu wave-sensitivity was lowest. Clan head Nayuta fell defending his family — while Nyoko, the clan's chief medic, bought four precious minutes with a forbidden final technique.</p>
+      </div>
+      <div class="beat">
+        <div class="k">ACT III</div>
+        <h3>The Prince of a Dead Clan</h3>
+        <p>Raided by his cousin Nora at age one, Nanzo grew up alone under the weight of 200 dead — raised on grief, legacy, and a buried truth he would only learn at age ten. Until one stubborn girl saw through the perfect exterior to the broken boy beneath.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAMILY ===================== -->
+<section id="family">
+  <div class="wrap">
+    <div class="sec-tag">The Anitsu Family</div>
+    <h2>Meet the Family</h2>
+    <p class="lead">The names behind the waves — the lost, the survivors, and the two who chose each other against all odds.</p>
+    <div class="chars">
+
+      <div class="char hero-tag">
+        <span class="tag">Protagonist · Clan Heir</span>
+        <h3>Nanzo Anitsu</h3>
+        <div class="aka">"The White Wolf" · The Last Heir</div>
+        <ul>
+          <li>Sole heir of the Anitsu Clan; orphaned at age one in the massacre</li>
+          <li>Golden yellow eyes — the mark of true Anitsu blood; wild black hair</li>
+          <li>Wave Style master, Wind Style user, and the inventor of Gravity Manipulation — built on pure physics</li>
+          <li>Sensory technique: Pulse Reading, reading the village's emotional currents</li>
+          <li>Grew up isolated and untouchable — until a forest duel with Karui changed everything</li>
+        </ul>
+      </div>
+
+      <div class="char">
+        <span class="tag">Father · Fallen</span>
+        <h3>Nayuta Anitsu</h3>
+        <div class="aka">"The Resonance Shield"</div>
+        <ul>
+          <li>Clan head at 28; master of the Wave Style</li>
+          <li>Fought in the Third Great Ninja War beside the Fourth Raikage</li>
+          <li>Famed for disrupting enemy ninjutsu with precision wave pulses</li>
+          <li>Fell defending the compound — the night everything changed</li>
+        </ul>
+      </div>
+
+      <div class="char">
+        <span class="tag">Mother · Fallen</span>
+        <h3>Nyoko Anitsu</h3>
+        <div class="aka">The Clan's Chief Medic</div>
+        <ul>
+          <li>Chief medic at 26; a genius of internal wave therapy — vibrational healing that mended shattered bones</li>
+          <li>Carried baby Nanzo through the secret tunnels as the Uchiha closed in</li>
+          <li>Sealed the children's escape with the forbidden technique <b>Wave Style: Final Resonance</b> — a final pulse that held every pursuer back</li>
+          <li>Her last thought was of her son's smile</li>
+        </ul>
+      </div>
+
+      <div class="char">
+        <span class="tag">Cousin · Guardian</span>
+        <h3>Nora Anitsu</h3>
+        <div class="aka">The One Who Stayed</div>
+        <ul>
+          <li>Only eight years old when she took baby Nanzo into the emergency chamber</li>
+          <li>Raised him as her own — taught him the Wave Style, told him the stories of his parents</li>
+          <li>Carried the full truth of the massacre alone for a decade</li>
+          <li>Her fierce devotion became both his armor and his cage</li>
+        </ul>
+      </div>
+
+      <div class="char">
+        <span class="tag">Cousin · Survivor</span>
+        <h3>Kiyoshi Anitsu</h3>
+        <div class="aka">The Would-Be Soldier</div>
+        <ul>
+          <li>Twelve at the massacre; survived in the Resonance Chamber</li>
+          <li>Grew into a Jonin and the clan's military instructor</li>
+          <li>Never recovered from the trauma — lost five years later on a routine mission</li>
+        </ul>
+      </div>
+
+      <div class="char">
+        <span class="tag">Cousin · Survivor</span>
+        <h3>Mei Anitsu</h3>
+        <div class="aka">The Silent Keeper</div>
+        <ul>
+          <li>Only six years old the night of the massacre</li>
+          <li>Never spoke again; her mind remained in that night</li>
+          <li>Lives in the rebuilt compound as its caretaker, tending the shrine of the dead</li>
+        </ul>
+      </div>
+
+      <div class="char hero-tag" style="grid-column:1/-1">
+        <span class="tag">The Stubborn Girl · Deuteragonist</span>
+        <h3>Karui of the Hidden Cloud</h3>
+        <div class="aka">Student of Killer B · Kenjutsu Master</div>
+        <ul>
+          <li>Chūnin kenjutsu specialist under Killer B himself; member of Team Samui alongside Omoi and Samui</li>
+          <li>Red hair, amber eyes, and a temper that once made her a liability at the Five Kage Summit</li>
+          <li>Defeated Nanzo in the forest — not with jutsu or bloodline, but with teeth, will, and perfect reading of his cooldowns</li>
+          <li>The first person to ever truly <b>see</b> him — and the one who taught him what real strength looks like</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLAN / POWER SYSTEM ===================== -->
+<section id="clan">
+  <div class="wrap">
+    <div class="sec-tag">Power System</div>
+    <h2>The Wave Style</h2>
+    <p class="lead">
+      The Anitsu Kekkei Genkai manipulates <b>vibration itself</b> — from shockwaves in the air to the very
+      brain waves of a living mind. It is the natural counter to Genjutsu: a Wave Style master can shatter
+      illusions before they take hold, and even destabilize an opponent's chakra network. But every wave
+      has its limits.
+    </p>
+    <div class="powers">
+      <div class="power">
+        <h3>Wave Style</h3>
+        <p>Vibrational pulses that bypass skin and muscle and strike organs directly — liquefying lungs, shattering tenketsu, disrupting chakra flow. At its height, it can rupture internal organs without an external wound.</p>
+      </div>
+      <div class="power">
+        <h3>Gravity Manipulation</h3>
+        <p>Nanzo's own invention — founded on his academy expertise in physics. Calculated fields of artificial gravity pin opponents like specimens. Brilliant, precise, and utterly unlike anything the clan's ancestors imagined.</p>
+      </div>
+      <div class="power">
+        <h3>Wind Style</h3>
+        <p>Nanzo's second element — long and mid-range blades of compressed air, like the Massive Destroyer. Devastating at a distance, but unusable up close without killing the user too.</p>
+      </div>
+      <div class="power">
+        <h3>Pulse Reading</h3>
+        <p>The Anitsu sensory art: reading shifts in the village's chakra atmosphere — tension, fear, shock. Nyoko's Final Resonance could be felt by every Anitsu across the Hidden Cloud.</p>
+      </div>
+      <div class="power weak">
+        <h3>The Five-Meter Dead Zone</h3>
+        <p>Wave pulses cannot be emitted within five meters of the user without harming themselves. Inside that circle, a Wave Style master has no jutsu, no taijutsu, no kenjutsu — nothing but their own body.</p>
+      </div>
+      <div class="power weak">
+        <h3>The Cooldowns</h3>
+        <p>Fifteen minutes between major Wave Style techniques. One minute of Gravity Manipulation, then thirty minutes of helplessness. Power without adaptability becomes helplessness — a lesson Karui taught the Prince the hard way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VOLUMES ===================== -->
+<section id="volumes">
+  <div class="wrap">
+    <div class="sec-tag">Complete Edition</div>
+    <h2>Volumes &amp; Chapter Guide</h2>
+    <p class="lead">The full Nanzo Arc — the Past Arc, and all three volumes with every chapter of the complete edition.</p>
+
+    <div class="vol">
+      <div class="vol-head">
+        <span class="vol-num">PAST ARC</span>
+        <span class="vol-title">The Silence of Waves — The Anitsu Clan Massacre</span>
+      </div>
+      <div class="chapter-list">
+        <div class="ch"><span class="n">ARC</span><span class="t">The Secret War · The Night of Broken Waves · The Massacre · Nyoko's Last Stand · The Rescue · The Aftermath</span></div>
+        <div class="ch"><span class="n">NOTE</span><span class="t">Year: 4 years after the Third Great Ninja War · Casualties: 97% of the clan · Survivors: 4</span></div>
+      </div>
+    </div>
+
+    <div class="vol">
+      <div class="vol-head">
+        <span class="vol-num">VOLUME I</span>
+        <span class="vol-title">The Prince and the Stubborn Girl</span>
+      </div>
+      <div class="chapter-list">
+        <div class="ch"><span class="n">CH 1</span><span class="t">The Weight of White</span></div>
+        <div class="ch"><span class="n">CH 2</span><span class="t">Flashback — The Forest of Broken Pride <small>(The Orphan Prince · The Physics of Isolation · The Girl Who Didn't Care)</small></span></div>
+        <div class="ch"><span class="n">CH 2</span><span class="t">The Return</span></div>
+        <div class="ch"><span class="n">CH 3</span><span class="t">The Compound</span></div>
+        <div class="ch"><span class="n">CH 4</span><span class="t">The Cipher of Waves</span></div>
+        <div class="ch"><span class="n">CH 5</span><span class="t">The Mission of Broken Things</span></div>
+        <div class="ch"><span class="n">CH 6</span><span class="t">The Announcement</span></div>
+        <div class="ch"><span class="n">CH 7</span><span class="t">The Wedding of Waves</span></div>
+      </div>
+    </div>
+
+    <div class="vol">
+      <div class="vol-head">
+        <span class="vol-num">VOLUME II</span>
+        <span class="vol-title">The Shadows of Shibai</span>
+      </div>
+      <div class="chapter-list">
+        <div class="ch"><span class="n">CH 8</span><span class="t">The Secret of Origins</span></div>
+        <div class="ch"><span class="n">CH 9</span><span class="t">The Mission to the Land of Waves</span></div>
+        <div class="ch"><span class="n">CH 10</span><span class="t">The Tide Rises</span></div>
+        <div class="ch"><span class="n">CH 11</span><span class="t">The Drowning and the Rescue</span></div>
+      </div>
+    </div>
+
+    <div class="vol">
+      <div class="vol-head">
+        <span class="vol-num">VOLUME III</span>
+        <span class="vol-title">The Waver's Choice</span>
+      </div>
+      <div class="chapter-list">
+        <div class="ch"><span class="n">CH 12</span><span class="t">The War of Waves</span></div>
+        <div class="ch"><span class="n">CH 13</span><span class="t">The Gravity of Wolves</span></div>
+        <div class="ch"><span class="n">CH 14</span><span class="t">Journey to Harbour of Nadeshiko Village</span></div>
+        <div class="ch"><span class="n">CH 15</span><span class="t">The Weight of Lightning — Nanzo's Refusal</span></div>
+        <div class="ch"><span class="n">CH 16</span><span class="t">The Future of Waves</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE ===================== -->
+<section>
+  <div class="quote">
+    <p>"I take you not to maintain what was, but to create what will be — <b>two waves that meet and merge and become something stronger than either alone.</b>"</p>
+    <div class="who">The Wedding of Waves · Chapter 7</div>
+  </div>
+</section>
+
+<!-- ===================== READ CTA ===================== -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="sec-tag" style="text-align:center">Ready to begin?</div>
+    <h2 style="text-align:center">Read the Nanzo Arc</h2>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="index.html#novel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg>
+        Read Online
+      </a>
+      <a class="btn btn-ghost" href="Nanzo Arc Naruto neo Universe ( Novel edition) NowNet production (PDF).pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        Download the Novel
+      </a>
+      <a class="btn btn-outline" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="Nownet_Full_Logo.png" onerror="this.onerror=null;this.src='Logo.jpg'" alt="NOWNET">
+  <div class="f-brand">NOWNET PRODUCTION</div>
+  <p>Nanzo Arc · Naruto Neo Universe (Novel Edition) · Written by Navaneeth Krishna</p>
+  <p>Feedback: <a href="mailto:nownetofficial@gmail.com">nownetofficial@gmail.com</a> · © 2026 NOWNET Production. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
